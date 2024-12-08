@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+	font-family: 'ProductSans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/Product-Sans-Regular.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'PT';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/PTSans-Regular.ttf') format('ttf');
+}
