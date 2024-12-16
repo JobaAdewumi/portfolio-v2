@@ -9,8 +9,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				ProductSans: ['ProductSans', 'sans-serif'],
-				PT: ['PT', 'sans-serif']
+				productSans: ['"ProductSans"', 'sans-serif'],
+				pT: ['"PT"', 'sans-serif']
 			}
 		}
 	},

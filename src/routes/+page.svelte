@@ -1,8 +1,10 @@
-<section>
+<section class="mx-7 mb-3 mt-5 md:mx-12">
 	<div>
-		<h2 class="font- bg-red-500">One liner</h2>
+		<h2 class="font-pT my-3 bg-red-500 text-6xl md:text-8xl xl:text-9xl">This is the intro</h2>
 	</div>
-	<div><enhanced:img src="$lib/assets/images/headshot.jpg" alt="An alt text" /></div>
+	<div class="flex items-center justify-center">
+		<enhanced:img class=" w-1/2" src="$lib/assets/images/headshot.jpg" alt="An alt text" />
+	</div>
 	<div><button type="button">CTA</button></div>
 </section>
 
