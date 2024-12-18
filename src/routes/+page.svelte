@@ -1,5 +1,8 @@
 <script lang="ts">
+	import Navbar from '../lib/components/navbar.svelte';
 </script>
+
+<Navbar />
 
 <section class="mx-7 mb-3 mt-5 md:mx-12">
 	<div>
@@ -17,11 +20,11 @@
 		</div>
 	</div>
 	<div class="mb-5 mt-7 flex items-center justify-center">
-		<button class="h-16 w-24 rounded-2xl bg-blue-500 px-3 py-3" type="button">CTA</button>
+		<button class="h-16 w-24 rounded-2xl bg-blue-500 px-3 py-3" type="button">Portfolio</button>
 	</div>
 </section>
 
-<section>
+<!-- <section>
 	<div class="mx-3 flex justify-around">
 		<span> About Me </span>
 		<span> Portfolio </span>
@@ -36,4 +39,4 @@
 			asperiores magnam voluptatem iure.
 		</p>
 	</div>
-</section>
+</section> -->

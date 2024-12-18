@@ -6,12 +6,12 @@
 	font-family: 'ProductSans';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/Product-Sans-Regular.ttf') format('ttf');
+	src: url('src/lib/assets/fonts/Product-Sans-Regular.ttf') format('ttf');
 }
 
 @font-face {
 	font-family: 'PT';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/PTSans-Regular.ttf') format('ttf');
+	src: url('src/lib/assets/fonts/PTSans-Regular.ttf') format('ttf');
 }
