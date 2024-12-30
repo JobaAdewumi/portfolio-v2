@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<div class="mb-5 mt-7 flex items-center justify-center">
-		<button class="h-16 w-24 rounded-2xl bg-blue-500 px-3 py-3" type="button">Portfolio</button>
+		<button class="h-12 w-28 rounded-2xl bg-blue-500 px-3 py-3" type="button">Portfolio</button>
 	</div>
 </section>
 
