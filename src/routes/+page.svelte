@@ -4,7 +4,7 @@
 
 <Navbar />
 
-<section class="mx-7 mb-3 mt-5 md:mx-12">
+<section class="mx-7 mb-3 mt-20 md:mx-12">
 	<div>
 		<h2 class="font-pT my-3 bg-red-500 text-center text-6xl md:text-8xl xl:text-9xl">
 			This is the intro
