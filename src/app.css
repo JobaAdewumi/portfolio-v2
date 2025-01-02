@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+	background-color: rgb(35, 75, 3);
+}
+
 @font-face {
 	font-family: 'ProductSans';
 	font-style: normal;
