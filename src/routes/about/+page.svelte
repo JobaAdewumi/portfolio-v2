@@ -5,7 +5,7 @@
 
 <Navbar />
 
-<section class="my-10">
+<section class="my-10 mt-20">
 	<h2 class="font-pT my-3 mx-3 bg-red-500 text-left text-3xl md:text-5xl xl:text-6xl">
 		ABOUT ME
 	</h2>
@@ -46,3 +46,5 @@
 		</p>
 	</div>
 </section>
+
+
