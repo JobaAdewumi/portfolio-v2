@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 body {
-	background-color: rgb(35, 75, 3);
+	/* background-color: rgb(35, 75, 3); */
 }
 
 @font-face {
