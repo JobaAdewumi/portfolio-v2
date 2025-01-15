@@ -31,7 +31,7 @@
 
 <nav
 	class="fixed left-0 right-0 top-0 z-50 mx-3 my-3 flex justify-between rounded-2xl px-1 py-1 transition-all duration-300"
-	class:bg-red-500={$scrolled || $isOpen}
+	class:bg-customBrown={$scrolled || $isOpen}
 	class:bg-transparent={!$scrolled && !$isOpen}
 >
 	<div class="max-w-12">
@@ -64,12 +64,15 @@
 			</svg>
 		</button>
 		<div
-			class="menu mx-3 flex-wrap items-center justify-around space-x-4 md:space-x-8 hidden md:flex"
+			class="menu mx-3 hidden flex-wrap items-center justify-around space-x-4 md:flex md:space-x-8"
 		>
-			<a href="/about" class="block md:inline">About Me</a>
-			<a href="/portfolio" class="block md:inline">Portfolio</a>
-			<a href="/services" class="block md:inline">Services</a>
-			<a href="/links" class="block md:inline">Links</a>
+			<a href="/about" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">About Me</a>
+			<a href="/portfolio" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300"
+				>Portfolio</a
+			>
+			<a href="/services" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">Services</a
+			>
+			<a href="/links" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">Links</a>
 		</div>
 
 		<div
