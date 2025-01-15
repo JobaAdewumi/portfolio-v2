@@ -11,6 +11,12 @@ export default {
 			fontFamily: {
 				productSans: ['"ProductSans"', 'sans-serif'],
 				pT: ['"PT"', 'sans-serif']
+			},
+			colors: {
+				customGrey: '#7e7e7e',
+				customGreen: '#5f9a8a',
+				customRed: '#d04f62',
+				customBrown: '#272020'
 			}
 		}
 	},
