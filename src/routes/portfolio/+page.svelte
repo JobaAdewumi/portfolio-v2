@@ -186,7 +186,7 @@
 				{/if}
 				<div class="mb-5 mt-3 flex justify-center">
 					<button
-						class="h-auto w-auto rounded-2xl bg-customGrey px-3 py-3 font-productSans transition-all duration-300 hover:bg-customGreen"
+						class="h-auto w-auto rounded-2xl bg-customGrey px-3 py-3 font-productSans transition-all duration-300 text-white hover:bg-customGreen"
 						type="button"
 					>
 						<a target="_blank" rel="noopener noreferrer" href={link}>{cta}</a>

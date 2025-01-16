@@ -45,7 +45,7 @@
 
 <Navbar />
 
-<section class="min-h-screen mx-7 mb-3 mt-20 md:mx-12">
+<section class="mx-7 mb-3 mt-36 md:mx-12">
 	<div>
 		<h2 class="my-3 text-white text-center font-pT text-6xl md:text-8xl xl:text-9xl">
 			Joba Adewumi
@@ -65,7 +65,7 @@
 	</div>
 	<div class="mb-5 mt-7 flex items-center justify-center">
 		<a href="/Joba-Adewumi-Resume.pdf" download>
-			<button class="h-auto w-auto rounded-2xl bg-customGrey hover:bg-customGreen px-3 py-3 font-productSans" type="button">Download CV</button>
+			<button class="h-auto text-white w-auto rounded-2xl bg-customGrey hover:bg-customGreen px-3 py-3 font-productSans" type="button">Download CV</button>
 		</a>
 	</div>
 
