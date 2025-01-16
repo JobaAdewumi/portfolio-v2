@@ -137,7 +137,7 @@
 				<a
 					href={link.url}
 					download={link.title === 'Resume/CV'}
-					class="block w-full rounded-lg 	border-2 hover:border-customBrown bg-customRed px-6 py-3 text-center text-white transition-all hover:bg-customGrey"
+					class="block w-full rounded-lg 	border-2 hover:border-customBrown bg-customGrey px-6 py-3 text-center text-white transition-all hover:bg-customRed"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
