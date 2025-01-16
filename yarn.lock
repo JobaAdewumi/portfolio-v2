@@ -618,12 +618,13 @@
   dependencies:
     import-meta-resolve "^4.1.0"
 
-"@sveltejs/enhanced-img@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@sveltejs/enhanced-img/-/enhanced-img-0.4.1.tgz#262c20171a235ca78c1a8c09bcdf1ac58c4167d5"
-  integrity sha512-Z0xwQWM7tfdlNYuaFsAsbjEosEZb961yP7hlvZBLlh3+Rv4tI3BboD6bUkmInj+cC66p/5rybgvEtxX5LILSuw==
+"@sveltejs/enhanced-img@^0.4.4":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@sveltejs/enhanced-img/-/enhanced-img-0.4.4.tgz#b269da3c17c1845cdc26b5ece0ad3aaa74351f13"
+  integrity sha512-BlBTGfbLUgHa+zSVrsGLOd+noCKWfipoOjoxE26bAAX97v7zh5eiCAp1KEdpkluL05Tl3+nR14gQdPsATyZqoA==
   dependencies:
     magic-string "^0.30.5"
+    sharp "^0.33.5"
     svelte-parse-markup "^0.1.5"
     vite-imagetools "^7.0.1"
     zimmerframe "^1.1.2"
@@ -2057,7 +2058,7 @@ set-cookie-parser@^2.6.0:
   resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.7.1.tgz#3016f150072202dfbe90fadee053573cc89d2943"
   integrity sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==
 
-sharp@^0.33.4:
+sharp@^0.33.4, sharp@^0.33.5:
   version "0.33.5"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.33.5.tgz#13e0e4130cc309d6a9497596715240b2ec0c594e"
   integrity sha512-haPVm1EkS9pgvHrQ/F3Xy+hgcuMV0Wm9vfIBSiwZ05k+xgb0PkBQpGsAA/oWdDobNaZTH5ppvHtzCFbnSEwHVw==

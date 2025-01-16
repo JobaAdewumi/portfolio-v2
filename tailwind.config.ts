@@ -9,8 +9,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				productSans: ['"ProductSans"', 'sans-serif'],
-				pT: ['"PT"', 'sans-serif']
+				productSans: ['ProductSans', 'system-ui', 'sans-serif'],
+				pT: ['PT', 'system-ui', 'sans-serif']
 			},
 			colors: {
 				customGrey: '#7e7e7e',
