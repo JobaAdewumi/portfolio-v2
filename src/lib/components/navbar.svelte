@@ -36,22 +36,22 @@
 >
 	<div class="max-w-12">
 		<a href="/">
-			<img src="src/lib/assets/images/logo-white.png" alt="Logo" />
+			<img src="/images/logo-white.png" alt="Logo" />
 		</a>
 	</div>
 
 	<div class="flex items-center">
 		<button
-			class="p-2 transition-transform duration-300 md:hidden"
+			class="p-2 transition-transform duration-300 md:hidden text-white"
 			class:rotate-90={$isOpen}
 			onclick={toggleMenu}
 			aria-label="Toggle menu"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-6 w-6 transition-transform duration-300"
+				class="h-6 w-6 transition-transform duration-300 "
 				class:rotate-45={$isOpen}
-				fill="none"
+				fill="currentColor"
 				viewBox="0 0 24 24"
 				stroke="currentColor"
 			>
@@ -64,31 +64,31 @@
 			</svg>
 		</button>
 		<div
-			class="menu mx-3 hidden flex-wrap items-center justify-around space-x-4 md:flex md:space-x-8"
+			class="menu mx-3 hidden flex-wrap items-center justify-around space-x-4 md:flex md:space-x-8 transition-all duration-300 font-productSans"
 		>
 			<a href="/about" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">About Me</a>
 			<a href="/portfolio" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300"
 				>Portfolio</a
 			>
-			<a href="/services" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">Services</a
-			>
+			<!-- <a href="/services" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">Services</a
+			> -->
 			<a href="/links" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">Links</a>
 		</div>
 
 		<div
 			class="absolute right-0 top-16 w-full transform rounded-2xl transition-all duration-300 ease-in-out"
-			class:bg-red-500={$isOpen}
+			class:bg-customBrown={$isOpen}
 			class:translate-x-0={$isOpen}
 			class:translate-x-full={!$isOpen}
 			class:opacity-100={$isOpen}
 			class:opacity-0={!$isOpen}
 			class:pointer-events-none={!$isOpen}
 		>
-			<div class="flex flex-col space-y-4 p-4 md:flex-row md:space-x-8 md:space-y-0">
-				<a href="/about" class="text-white">About Me</a>
-				<a href="/portfolio" class="text-white">Portfolio</a>
-				<a href="/services" class="text-white">Services</a>
-				<a href="/links" class="text-white">Links</a>
+			<div class="flex flex-col space-y-4 p-4 md:flex-row md:space-x-8 md:space-y-0 font-productSans">
+				<a href="/about" class="hover:text-customGreen text-customRed">About Me</a>
+				<a href="/portfolio" class="hover:text-customGreen text-customRed">Portfolio</a>
+				<!-- <a href="/services" class="hover:text-customGreen text-customRed">Services</a> -->
+				<a href="/links" class="hover:text-customGreen text-customRed">Links</a>
 			</div>
 		</div>
 	</div>

@@ -2,7 +2,7 @@
 	import Navbar from "../../lib/components/navbar.svelte";
 
 	const links = [
-		{ title: 'Resume/CV', url: 'src/lib/assets/Joba-Adewumi-Resume.pdf' },
+		{ title: 'Resume/CV', url: 'Joba-Adewumi-Resume.pdf' },
 		{ title: 'Podcast on Spotify', url: 'https://open.spotify.com/show/4fIBS5rikdEvGh6tSJ93zW' },
 
 		{ title: 'YouTube', url: 'https://www.youtube.com/@jbtheinspirer' },
@@ -118,17 +118,17 @@
 
 <Navbar />
 
-<div class="min-h-screen bg-gradient-to-b from-cyan-700 to-cyan-900 px-4 py-16">
+<div class="min-h-screen bg-gradient-to-b to-customGreen from-customBrown px-4 py-16">
 	<div class="mx-auto max-w-2xl text-center mt-8">
 		<!-- Profile Section -->
 		<div class="mb-8">
 			<img
-				src="src/lib/assets/images/headshot.jpg"
+				src="/images/headshot.jpg"
 				alt="Joba Adewumi"
-				class="mx-auto h-24 w-24 rounded-full border-2 border-red-500"
+				class="mx-auto h-28 w-28 rounded-full border-2 border-red-500"
 			/>
-			<h1 class="mt-4 text-2xl font-bold text-white">Joba Adewumi</h1>
-			<p class="mt-2 text-gray-300">Software Developer | Designer | Creator</p>
+			<h1 class="mt-4 text-2xl font-bold text-white font-productSans">Joba Adewumi</h1>
+			<p class="mt-2 text-gray-300 font-pT">Software Developer | Designer | Podcaster | Photographer | Writer</p>
 		</div>
 
 		<!-- Links Section -->
@@ -136,7 +136,8 @@
 			{#each links as link}
 				<a
 					href={link.url}
-					class="block w-full rounded-lg bg-red-500 px-6 py-3 text-center text-white transition-all hover:bg-red-600"
+					download={link.title === 'Resume/CV'}
+					class="block w-full rounded-lg 	border-2 hover:border-customBrown bg-customRed px-6 py-3 text-center text-white transition-all hover:bg-customGrey"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
@@ -150,7 +151,7 @@
 			{#each socialLinks as { platform, url, content }}
 				<a
 					href={url}
-					class="text-gray-400 transition-colors duration-300 hover:text-red-500"
+					class="text-customBrown transition-colors duration-300 hover:text-red-500"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label={platform}

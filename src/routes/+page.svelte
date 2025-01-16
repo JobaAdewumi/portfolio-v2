@@ -46,22 +46,25 @@
 
 <section class="mx-7 mb-3 mt-20 md:mx-12">
 	<div>
-		<h2 class="my-3 bg-red-500 text-center font-pT text-6xl md:text-8xl xl:text-9xl">
-			This is the intro
+		<h2 class="my-3 text-white text-center font-pT text-6xl md:text-8xl xl:text-9xl">
+			Joba Adewumi
+		</h2>
+		<h2 class="my-3 text-customGrey text-center font-productSans text-xl md:text-3xl xl:text-4xl">
+			Software Engineer & Creative
 		</h2>
 	</div>
 	<div class="flex items-center justify-center">
 		<div class="w-2/4">
 			<enhanced:img
 				class="mx-auto rounded-3xl"
-				src="$lib/assets/images/headshot.jpg"
+				src="/images/headshot.jpg"
 				alt="An alt text"
 			/>
 		</div>
 	</div>
 	<div class="mb-5 mt-7 flex items-center justify-center">
 		<a href="/Joba-Adewumi-Resume.pdf" download>
-			<button class="h-auto w-auto rounded-2xl bg-customGrey hover:bg-customGreen px-3 py-3" type="button">Download CV</button>
+			<button class="h-auto w-auto rounded-2xl bg-customGrey hover:bg-customGreen px-3 py-3 font-productSans" type="button">Download CV</button>
 		</a>
 	</div>
 

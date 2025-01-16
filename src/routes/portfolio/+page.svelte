@@ -1,6 +1,6 @@
 <script>
 	import Footer from '$lib/components/footer.svelte';
-import Navbar from '$lib/components/navbar.svelte';
+	import Navbar from '$lib/components/navbar.svelte';
 
 	const data = [
 		{
@@ -22,7 +22,7 @@ import Navbar from '$lib/components/navbar.svelte';
 		},
 		{
 			title: 'Software Development & Web Development',
-			image: 'src/lib/assets/images/portfolio/Software.png',
+			image: '/images/portfolio/Software.png',
 			alt: '',
 			description:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
@@ -39,7 +39,7 @@ import Navbar from '$lib/components/navbar.svelte';
 		},
 		{
 			title: 'Writing & Editing',
-			image: 'src/lib/assets/images/portfolio/writing.png',
+			image: '/images/portfolio/writing.png',
 			alt: '',
 			description:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
@@ -56,7 +56,7 @@ import Navbar from '$lib/components/navbar.svelte';
 		},
 		{
 			title: 'Podcast Editing & Production',
-			image: 'src/lib/assets/images/portfolio/Podcast.png',
+			image: '/images/portfolio/Podcast.png',
 			alt: '',
 			description:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
@@ -75,7 +75,7 @@ import Navbar from '$lib/components/navbar.svelte';
 
 		{
 			title: 'Photography & Photo Editing',
-			image: 'src/lib/assets/images/project1.jpg',
+			image: '',
 			alt: '',
 			description:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
@@ -96,25 +96,25 @@ import Navbar from '$lib/components/navbar.svelte';
 <Navbar />
 
 <section class="my-10 mt-20">
-	<h2 class="mx-3 my-3 bg-red-500 text-left font-pT text-3xl md:text-5xl xl:text-6xl">PORTFOLIO</h2>
+	<h2 class="mx-3 my-3  text-left font-pT text-3xl md:text-5xl xl:text-6xl text-white">PORTFOLIO</h2>
 </section>
 
-<section>
+<section class="mb-8">
 	<!-- Would have to do a for each statement to render the multiple data -->
 	{#each data as { title, image, alt, description, link, video, podcastEmbed, cta, photo1, photo2, photo3, photo4, photo5, photo6 }}
 		<div class="mt-5">
-			<h2 class="mx-3 my-3 bg-red-500 text-left font-pT text-xl capitalize md:text-3xl xl:text-4xl">
+			<h2 class="mx-3 my-3 mb-5  text-left font-pT text-xl capitalize md:text-3xl xl:text-4xl text-white">
 				{title}
 			</h2>
 			<div class="mx-7 mb-3 mt-5 md:mx-12">
-				<div>
+				<div class="mb-5">
 					<img class="mx-auto rounded-3xl" src={image} {alt} />
 				</div>
 				<!-- Would have an if statement to check if video field is an empty string else show a video embed -->
 				{#if video !== ''}
 					<iframe
 						title="Life Podcast by Joba Adewumi"
-						class="mt-5 h-96 w-full rounded-xl"
+						class="mt-5 h-96 w-full rounded-xl mb-5"
 						src={video}
 						width="100%"
 						frameBorder="0"
@@ -141,7 +141,7 @@ import Navbar from '$lib/components/navbar.svelte';
 
 					<iframe
 						title="Life Podcast by Joba Adewumi"
-						class="mt-5 rounded-xl"
+						class="mt-5 rounded-xl mb-5"
 						src={podcastEmbed}
 						width="100%"
 						height="232"
@@ -150,17 +150,19 @@ import Navbar from '$lib/components/navbar.svelte';
 					></iframe>
 				{/if}
 				{#if title === 'Writing & Editing'}
-<!-- For writing -->
-					<iframe title="Life Podcast by Joba Adewumi"
-								src='https://jobaadewumi.substack.com/embed'
-								width='100%'
-								height='232'
-								class="mt-5 rounded-xl border-1 border-teal-500"
-								allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>
+					<!-- For writing -->
+					<iframe
+						title="Life Podcast by Joba Adewumi"
+						src="https://jobaadewumi.substack.com/embed"
+						width="100%"
+						height="232"
+						class="border-1 mt-5 rounded-xl border-teal-500 mb-5"
+						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+					></iframe>
 				{/if}
 
 				{#if description === ''}
-					<div>
+					<div class="mb-5">
 						<img src={photo1} alt="" />
 						<img src={photo2} alt="" />
 						<img src={photo3} alt="" />
@@ -169,12 +171,15 @@ import Navbar from '$lib/components/navbar.svelte';
 						<img src={photo6} alt="" />
 					</div>
 				{:else}
-					<p class="mt-3">
+					<p class="mt-3 text-white font-productSans mb-5">
 						{description}
 					</p>
 				{/if}
-				<div class="mt-3 flex justify-center">
-					<button class="h-auto w-auto rounded-2xl bg-blue-500 px-3 py-3" type="button">
+				<div class="mt-3 flex justify-center mb-5">
+					<button
+						class="h-auto w-auto rounded-2xl bg-customGrey px-3 py-3 transition-all duration-300 hover:bg-customGreen font-productSans"
+						type="button"
+					>
 						<a target="_blank" rel="noopener noreferrer" href={link}>{cta}</a>
 					</button>
 				</div>
