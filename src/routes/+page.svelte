@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Navbar from '../lib/components/navbar.svelte';
-	import headshot from '$lib/assets/images/headshot.jpg'
+	import headshot from '$lib/assets/images/headshot.jpg';
 
 	const socialLinks = [
 		{
@@ -38,38 +38,41 @@
 			url: 'https://jobaadewumi.substack.com/',
 			content:
 				'<title data-testid="svgTitle" id="title_0.7095150292609758">Substack</title> <path d="M21 2.5v2H3v-2h18m0-1H3a1 1 0 00-1 1v2a1 1 0 001 1h18a1 1 0 001-1v-2a1 1 0 00-1-1zM21 7.523v2H3v-2h18m0-1H3a1 1 0 00-1 1v2a1 1 0 001 1h18a1 1 0 001-1v-2a1 1 0 00-1-1zM21 12.5v8.471l-8.199-3.585a2 2 0 00-1.602 0L3 20.971V12.5h18m0-1H3a1 1 0 00-1 1v8.471a.998.998 0 001.4.917l8.2-3.585a1 1 0 01.8 0l8.2 3.585a.998.998 0 001.4-.917V12.5a1 1 0 00-1-1z"></path>'
-		},
+		}
 		// Add other social links here
 	];
 </script>
 
 <Navbar />
-
-<section class="mx-7 mb-3 mt-36 md:mx-12">
-	<div>
-		<h2 class="my-3 text-white text-center font-pT text-6xl md:text-8xl xl:text-9xl">
-			Joba Adewumi
-		</h2>
-		<h2 class="my-3 text-customGrey text-center font-productSans text-xl md:text-3xl xl:text-4xl">
-			Software Engineer & Creative
-		</h2>
-	</div>
-	<div class="flex items-center justify-center">
-		<div class="w-2/4">
-			<enhanced:img
-				class="mx-auto rounded-3xl"
-				src='/static/images/headshot.jpg'
-				alt="An alt text"
-			/>
+<div class="flex min-h-screen flex-col items-center justify-center">
+	<section class="mx-7 mb-3 mt-20 md:mx-12">
+		<div>
+			<h2 class="my-3 text-center font-pT text-6xl text-white md:text-8xl xl:text-9xl">
+				Joba Adewumi
+			</h2>
+			<h2 class="my-3 text-center font-productSans text-xl text-customGrey md:text-3xl xl:text-4xl">
+				Software Engineer & Creative
+			</h2>
 		</div>
-	</div>
-	<div class="mb-5 mt-7 flex items-center justify-center">
-		<a href="/Joba-Adewumi-Resume.pdf" download>
-			<button class="h-auto text-white w-auto rounded-2xl bg-customGrey hover:bg-customGreen px-3 py-3 font-productSans" type="button">Download CV</button>
-		</a>
-	</div>
+		<div class="flex items-center justify-center">
+			<div class="w-2/4">
+				<enhanced:img
+					class="mx-auto rounded-3xl"
+					src="/static/images/headshot.jpg"
+					alt="An alt text"
+				/>
+			</div>
+		</div>
+		<div class="mb-5 mt-7 flex items-center justify-center">
+			<a href="/Joba-Adewumi-Resume.pdf" download>
+				<button
+					class="h-auto w-auto rounded-2xl bg-customGrey px-3 py-3 font-productSans text-white hover:bg-customGreen"
+					type="button">Download CV</button
+				>
+			</a>
+		</div>
 
-	<!-- Social Icons Section -->
+		<!-- Social Icons Section -->
 		<div class="mt-8 flex flex-wrap justify-center gap-4">
 			{#each socialLinks as { platform, url, content }}
 				<a
@@ -85,7 +88,8 @@
 				</a>
 			{/each}
 		</div>
-</section>
+	</section>
+</div>
 
 <!-- <section>
 	<div class="mx-3 flex justify-around">
