@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Navbar from '../lib/components/navbar.svelte';
+	import headshot from '$lib/assets/images/headshot.jpg'
 
 	const socialLinks = [
 		{
@@ -57,7 +58,7 @@
 		<div class="w-2/4">
 			<enhanced:img
 				class="mx-auto rounded-3xl"
-				src="/images/headshot.jpg"
+				src='/static/images/headshot.jpg'
 				alt="An alt text"
 			/>
 		</div>
