@@ -36,7 +36,7 @@
 >
 	<div class="max-w-12">
 		<a href="/">
-			<img src="/images/logo-white.png" alt="Logo" />
+			<enhanced:img src="/static/images/logo-white.png" alt="Logo" />
 		</a>
 	</div>
 

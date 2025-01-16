@@ -45,7 +45,7 @@
 
 <Navbar />
 
-<section class="mx-7 mb-3 mt-20 md:mx-12">
+<section class="min-h-screen mx-7 mb-3 mt-20 md:mx-12">
 	<div>
 		<h2 class="my-3 text-white text-center font-pT text-6xl md:text-8xl xl:text-9xl">
 			Joba Adewumi

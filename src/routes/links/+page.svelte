@@ -122,10 +122,10 @@
 	<div class="mx-auto max-w-2xl text-center mt-8">
 		<!-- Profile Section -->
 		<div class="mb-8">
-			<img
-				src="/images/headshot.jpg"
+			<enhanced:img
+				src="/static/images/headshot.jpg"
 				alt="Joba Adewumi"
-				class="mx-auto h-28 w-28 rounded-full border-2 border-red-500"
+				class="mx-auto h-28 w-28 rounded-full border-2"
 			/>
 			<h1 class="mt-4 text-2xl font-bold text-white font-productSans">Joba Adewumi</h1>
 			<p class="mt-2 text-gray-300 font-pT">Software Developer | Designer | Podcaster | Photographer | Writer</p>

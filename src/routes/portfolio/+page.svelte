@@ -1,6 +1,9 @@
 <script>
 	import Footer from '$lib/components/footer.svelte';
 	import Navbar from '$lib/components/navbar.svelte';
+	// import softwarePic from '/static/images/portfolio/Software.png?enhanced';
+	// import writingPic from '/static/images/portfolio/writing.png?enhanced';
+	// import podcastPic from '/static/images/portfolio/Podcast.png?enhanced';
 
 	const data = [
 		{
@@ -22,7 +25,8 @@
 		},
 		{
 			title: 'Software Development & Web Development',
-			image: '/images/portfolio/Software.png',
+			image: "/images/portfolio/Software.png",
+			// image: softwarePic,
 			alt: '',
 			description:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
@@ -40,6 +44,7 @@
 		{
 			title: 'Writing & Editing',
 			image: '/images/portfolio/writing.png',
+			// image: writingPic,
 			alt: '',
 			description:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
@@ -57,6 +62,7 @@
 		{
 			title: 'Podcast Editing & Production',
 			image: '/images/portfolio/Podcast.png',
+			// image: podcastPic,
 			alt: '',
 			description:
 				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
@@ -96,25 +102,28 @@
 <Navbar />
 
 <section class="my-10 mt-20">
-	<h2 class="mx-3 my-3  text-left font-pT text-3xl md:text-5xl xl:text-6xl text-white">PORTFOLIO</h2>
+	<h2 class="mx-3 my-3 text-left font-pT text-3xl text-white md:text-5xl xl:text-6xl">PORTFOLIO</h2>
 </section>
 
 <section class="mb-8">
 	<!-- Would have to do a for each statement to render the multiple data -->
 	{#each data as { title, image, alt, description, link, video, podcastEmbed, cta, photo1, photo2, photo3, photo4, photo5, photo6 }}
 		<div class="mt-5">
-			<h2 class="mx-3 my-3 mb-5  text-left font-pT text-xl capitalize md:text-3xl xl:text-4xl text-white">
+			<h2
+				class="mx-3 my-3 mb-5 text-left font-pT text-xl capitalize text-white md:text-3xl xl:text-4xl"
+			>
 				{title}
 			</h2>
 			<div class="mx-7 mb-3 mt-5 md:mx-12">
 				<div class="mb-5">
 					<img class="mx-auto rounded-3xl" src={image} {alt} />
 				</div>
+
 				<!-- Would have an if statement to check if video field is an empty string else show a video embed -->
 				{#if video !== ''}
 					<iframe
 						title="Life Podcast by Joba Adewumi"
-						class="mt-5 h-96 w-full rounded-xl mb-5"
+						class="mb-5 mt-5 h-96 w-full rounded-xl"
 						src={video}
 						width="100%"
 						frameBorder="0"
@@ -141,7 +150,7 @@
 
 					<iframe
 						title="Life Podcast by Joba Adewumi"
-						class="mt-5 rounded-xl mb-5"
+						class="mb-5 mt-5 rounded-xl"
 						src={podcastEmbed}
 						width="100%"
 						height="232"
@@ -156,7 +165,7 @@
 						src="https://jobaadewumi.substack.com/embed"
 						width="100%"
 						height="232"
-						class="border-1 mt-5 rounded-xl border-teal-500 mb-5"
+						class="border-1 mb-5 mt-5 rounded-xl border-teal-500"
 						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 					></iframe>
 				{/if}
@@ -171,13 +180,13 @@
 						<img src={photo6} alt="" />
 					</div>
 				{:else}
-					<p class="mt-3 text-white font-productSans mb-5">
+					<p class="mb-5 mt-3 font-productSans text-white">
 						{description}
 					</p>
 				{/if}
-				<div class="mt-3 flex justify-center mb-5">
+				<div class="mb-5 mt-3 flex justify-center">
 					<button
-						class="h-auto w-auto rounded-2xl bg-customGrey px-3 py-3 transition-all duration-300 hover:bg-customGreen font-productSans"
+						class="h-auto w-auto rounded-2xl bg-customGrey px-3 py-3 font-productSans transition-all duration-300 hover:bg-customGreen"
 						type="button"
 					>
 						<a target="_blank" rel="noopener noreferrer" href={link}>{cta}</a>
