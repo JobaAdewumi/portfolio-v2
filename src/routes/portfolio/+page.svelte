@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
 	import Footer from '$lib/components/footer.svelte';
 	import Navbar from '$lib/components/navbar.svelte';
-	// import softwarePic from '/static/images/portfolio/Software.png?enhanced';
-	// import writingPic from '/static/images/portfolio/writing.png?enhanced';
-	// import podcastPic from '/static/images/portfolio/Podcast.png?enhanced';
+	import softwarePic from '$lib/assets/images/portfolio/Software.png?enhanced';
+	import writingPic from '$lib/assets/images/portfolio/writing.png?enhanced';
+	import podcastPic from '$lib/assets/images/portfolio/Podcast.png?enhanced';
 
 	const data = [
 		{
+			id: 1,
 			title: 'Video Editing & Videography',
 			image: '',
 			alt: '',
@@ -24,6 +25,7 @@
 			photo6: ''
 		},
 		{
+			id: 2,
 			title: 'Software Development & Web Development',
 			image: "/images/portfolio/Software.png",
 			// image: softwarePic,
@@ -42,6 +44,7 @@
 			photo6: ''
 		},
 		{
+			id: 3,
 			title: 'Writing & Editing',
 			image: '/images/portfolio/writing.png',
 			// image: writingPic,
@@ -60,6 +63,7 @@
 			photo6: ''
 		},
 		{
+			id: 4,
 			title: 'Podcast Editing & Production',
 			image: '/images/portfolio/Podcast.png',
 			// image: podcastPic,
@@ -80,6 +84,7 @@
 		},
 
 		{
+			id: 5,
 			title: 'Photography & Photo Editing',
 			image: '',
 			alt: '',
@@ -97,6 +102,8 @@
 			photo6: ''
 		}
 	];
+	
+
 </script>
 
 <Navbar />
@@ -107,7 +114,7 @@
 
 <section class="mb-8">
 	<!-- Would have to do a for each statement to render the multiple data -->
-	{#each data as { title, image, alt, description, link, video, podcastEmbed, cta, photo1, photo2, photo3, photo4, photo5, photo6 }}
+	{#each data as { id, title, image, alt, description, link, video, podcastEmbed, cta, photo1, photo2, photo3, photo4, photo5, photo6 }}
 		<div class="mt-5">
 			<h2
 				class="mx-3 my-3 mb-5 text-left font-pT text-xl capitalize text-white md:text-3xl xl:text-4xl"
@@ -116,7 +123,15 @@
 			</h2>
 			<div class="mx-7 mb-3 mt-5 md:mx-12">
 				<div class="mb-5">
+					{#if id == 2}
+					<enhanced:img class="mx-auto rounded-3xl" src={softwarePic} {alt} />
+					{:else if id == 3}
+					<enhanced:img class="mx-auto rounded-3xl" src={writingPic} {alt} />
+					{:else if id == 4}
+					<enhanced:img class="mx-auto rounded-3xl" src={podcastPic} {alt} />
+					{:else}
 					<img class="mx-auto rounded-3xl" src={image} {alt} />
+					{/if}
 				</div>
 
 				<!-- Would have an if statement to check if video field is an empty string else show a video embed -->
