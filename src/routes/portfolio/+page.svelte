@@ -5,6 +5,15 @@
 	import writingPic from '$lib/assets/images/portfolio/writing.png?enhanced';
 	import podcastPic from '$lib/assets/images/portfolio/Podcast.png?enhanced';
 
+	import photo1 from '$lib/assets/images/photogrid/photo1.jpg?enhanced';
+	import photo2 from '$lib/assets/images/photogrid/photo2.jpg?enhanced';
+	import photo3 from '$lib/assets/images/photogrid/photo3.jpg?enhanced';
+	import photo4 from '$lib/assets/images/photogrid/photo4.jpg?enhanced';
+	import photo5 from '$lib/assets/images/photogrid/photo5.jpg?enhanced';
+	import photo6 from '$lib/assets/images/photogrid/photo6.jpg?enhanced';
+	import photo7 from '$lib/assets/images/photogrid/photo7.jpg?enhanced';
+	import photo8 from '$lib/assets/images/photogrid/photo8.jpg?enhanced';
+
 	const data = [
 		{
 			id: 1,
@@ -27,7 +36,7 @@
 		{
 			id: 2,
 			title: 'Software Development & Web Development',
-			image: "/images/portfolio/Software.png",
+			image: '/images/portfolio/Software.png',
 			// image: softwarePic,
 			alt: '',
 			description:
@@ -102,8 +111,6 @@
 			photo6: ''
 		}
 	];
-	
-
 </script>
 
 <Navbar />
@@ -124,13 +131,13 @@
 			<div class="mx-7 mb-3 mt-5 md:mx-12">
 				<div class="mb-5">
 					{#if id == 2}
-					<enhanced:img class="mx-auto rounded-3xl" src={softwarePic} {alt} />
+						<enhanced:img class="mx-auto rounded-3xl" src={softwarePic} {alt} />
 					{:else if id == 3}
-					<enhanced:img class="mx-auto rounded-3xl" src={writingPic} {alt} />
+						<enhanced:img class="mx-auto rounded-3xl" src={writingPic} {alt} />
 					{:else if id == 4}
-					<enhanced:img class="mx-auto rounded-3xl" src={podcastPic} {alt} />
+						<enhanced:img class="mx-auto rounded-3xl" src={podcastPic} {alt} />
 					{:else}
-					<img class="mx-auto rounded-3xl" src={image} {alt} />
+						<img class="mx-auto rounded-3xl" src={image} {alt} />
 					{/if}
 				</div>
 
@@ -185,15 +192,42 @@
 					></iframe>
 				{/if}
 
-				{#if description === ''}
-					<div class="mb-5">
+				{#if id == 5}
+					<div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
+							<enhanced:img src="/static/images/photogrid/photo8.jpg" alt="" class="h-full w-full object-cover" />
+						</div>
+
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
+							<enhanced:img src="/static/images/photogrid/photo1.jpg" alt="" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
+							<enhanced:img src="/static/images/photogrid/photo2.jpg" alt="" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
+							<enhanced:img src="/static/images/photogrid/photo3.jpg" alt="" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
+							<enhanced:img src="/static/images/photogrid/photo4.jpg" alt="" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
+							<enhanced:img src="/static/images/photogrid/photo5.jpg" alt="" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
+							<enhanced:img src="/static/images/photogrid/photo6.jpg" alt="" class="h-full w-full object-cover" />
+						</div>
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
+							<enhanced:img src="/static/images/photogrid/photo7.jpg" alt="" class="h-full w-full object-cover" />
+						</div>
+					</div>
+					<!-- <div class="mb-5">
 						<img src={photo1} alt="" />
 						<img src={photo2} alt="" />
 						<img src={photo3} alt="" />
 						<img src={photo4} alt="" />
 						<img src={photo5} alt="" />
 						<img src={photo6} alt="" />
-					</div>
+					</div> -->
 				{:else}
 					<p class="mb-5 mt-3 font-productSans text-white">
 						{description}
@@ -201,7 +235,7 @@
 				{/if}
 				<div class="mb-5 mt-3 flex justify-center">
 					<button
-						class="h-auto w-auto rounded-2xl bg-customGrey px-3 py-3 font-productSans transition-all duration-300 text-white hover:bg-customGreen"
+						class="h-auto w-auto rounded-2xl bg-customGrey px-3 py-3 font-productSans text-white transition-all duration-300 hover:bg-customGreen"
 						type="button"
 					>
 						<a target="_blank" rel="noopener noreferrer" href={link}>{cta}</a>
