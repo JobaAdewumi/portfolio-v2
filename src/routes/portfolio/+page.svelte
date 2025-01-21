@@ -5,15 +5,6 @@
 	import writingPic from '$lib/assets/images/portfolio/writing.png?enhanced';
 	import podcastPic from '$lib/assets/images/portfolio/Podcast.png?enhanced';
 
-	import photo1 from '$lib/assets/images/photogrid/photo1.jpg?enhanced';
-	import photo2 from '$lib/assets/images/photogrid/photo2.jpg?enhanced';
-	import photo3 from '$lib/assets/images/photogrid/photo3.jpg?enhanced';
-	import photo4 from '$lib/assets/images/photogrid/photo4.jpg?enhanced';
-	import photo5 from '$lib/assets/images/photogrid/photo5.jpg?enhanced';
-	import photo6 from '$lib/assets/images/photogrid/photo6.jpg?enhanced';
-	import photo7 from '$lib/assets/images/photogrid/photo7.jpg?enhanced';
-	import photo8 from '$lib/assets/images/photogrid/photo8.jpg?enhanced';
-
 	const data = [
 		{
 			id: 1,
