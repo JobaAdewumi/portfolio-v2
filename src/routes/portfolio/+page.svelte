@@ -4,6 +4,7 @@
 	import softwarePic from '$lib/assets/images/portfolio/Software.png?enhanced';
 	import writingPic from '$lib/assets/images/portfolio/writing.png?enhanced';
 	import podcastPic from '$lib/assets/images/portfolio/Podcast.png?enhanced';
+	import Seo from '../../lib/components/seo.svelte';
 
 	const data = [
 		{
@@ -12,9 +13,9 @@
 			image: '',
 			alt: '',
 			description:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
+				"Join Joba Adewumi ('jbtheinspirer') as he delves into self-improvement, philosophy, and the human experience through engaging discussions, insightful podcasts, and thought-provoking photography.",
 			link: 'https://www.youtube.com/channel/UCZGvrbbwfQw3YyKvfIt3t4A',
-			video: 'https://www.youtube.com/embed/uZ50Kbc2Jpg',
+			video: 'https://www.youtube.com/embed/kGNvDlydQ-o',
 			podcastEmbed: '',
 			cta: 'Watch my Videos',
 			photo1: '',
@@ -31,7 +32,7 @@
 			// image: softwarePic,
 			alt: '',
 			description:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
+				"Joba Adewumi, known on GitHub as 'JobaAdewumi', is a versatile software engineer based in Lagos, Nigeria. He specializes in full-stack web development, native Android development, and cross-platform mobile app development using Flutter. As the founder of the WickedDevelopers Organization, Joba has demonstrated leadership and a commitment to fostering a community of developers. Technical Proficiencies- Frontend Development: Proficient in HTML, CSS, JavaScript, and TypeScript, with experience in frameworks and libraries such as React, Angular, Vue.js, Next.js, TailwindCSS, Sass, and Bootstrap.Backend Development: Skilled in Node.js, Express, NestJS, Django, and Go, enabling the creation of robust and scalable server-side applications.Mobile Development: Expertise in Flutter and Dart for building cross-platform mobile applications, alongside native Android development capabilities. Database Management: Experienced with PostgreSQL, ensuring efficient and reliable data storage solutions. Design Tools: Proficient in Adobe Photoshop and Figma, facilitating the creation of visually appealing and user-friendly interfaces.",
 			link: 'https://github.com/JobaAdewumi',
 			video: '',
 			podcastEmbed: '',
@@ -50,7 +51,7 @@
 			// image: writingPic,
 			alt: '',
 			description:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
+				"Joba's Thoughts is a Substack blog authored by Joba Adewumi, offering readers a collection of insightful essays and reflections. The blog delves into topics such as personal development, philosophy, and the human experience, providing thoughtful perspectives and fostering meaningful discussions. Joba's unique voice and depth of thought make this blog a valuable resource for those seeking to explore life's complexities.",
 			link: 'https://jobaadewumi.substack.com',
 			video: '',
 			podcastEmbed: '',
@@ -69,7 +70,7 @@
 			// image: podcastPic,
 			alt: '',
 			description:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium quod non, cumque repellat asperiores facilis porro unde voluptatibus maxime culpa exercitationem quo necessitatibus aut ullam fugiat earum, fuga delectus!',
+				"'Life' is a podcast by Joba Adewumi that explores frameworks for living a fulfilling life through the lenses of philosophy, observation, and critical thinking. With 47 episodes released over the past three years, the podcast covers topics such as self-improvement, emotional intelligence, and personal growth. Episodes like 'Pure Focus: The Price of Dreams' and 'Are You a Good Person?' invite listeners to reflect deeply on their aspirations and moral compass. Joba's engaging and thoughtful approach provides valuable insights for anyone seeking to navigate life's complexities. ",
 			link: 'https://creators.spotify.com/pod/show/joba-adewumi4',
 			video: '',
 			podcastEmbed:
@@ -104,6 +105,13 @@
 	];
 </script>
 
+<Seo
+	title="Joba Adewumi's Portfolio"
+	description="Explore my Work from Software engineering, Podcasting, Writing, Designing and Photography."
+	keywords="software engineer, full-stack developer, web development, React, Node.js, JavaScript, TypeScript, SvelteKit, Python, Data Science, Flutter, Mobile development, Android, IOS, blog, portfolio, Joba Adewumi, frontend development, backend development, photography, design, writing, podcasting, videography"
+	image="/images/portfolio/Software.png"
+/>
+
 <Navbar />
 
 <section class="my-10 mt-20">
@@ -135,12 +143,14 @@
 				<!-- Would have an if statement to check if video field is an empty string else show a video embed -->
 				{#if video !== ''}
 					<iframe
-						title="Life Podcast by Joba Adewumi"
+						title="Joba Adewumi Youtube"
 						class="mb-5 mt-5 h-96 w-full rounded-xl"
 						src={video}
 						width="100%"
 						frameBorder="0"
-						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+						allow=" accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
 					></iframe>
 					<!-- <video src={video} controls>
 						<track kind="captions" srclang="en" label="English" />
@@ -186,29 +196,61 @@
 				{#if id == 5}
 					<div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
-							<enhanced:img src="/static/images/photogrid/photo8.jpg" alt="" class="h-full w-full object-cover" />
+							<enhanced:img
+								src="/static/images/photogrid/photo8.jpg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
 						</div>
 
 						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
-							<enhanced:img src="/static/images/photogrid/photo1.jpg" alt="" class="h-full w-full object-cover" />
+							<enhanced:img
+								src="/static/images/photogrid/photo1.jpg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
 						</div>
 						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
-							<enhanced:img src="/static/images/photogrid/photo2.jpg" alt="" class="h-full w-full object-cover" />
+							<enhanced:img
+								src="/static/images/photogrid/photo2.jpg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
 						</div>
 						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
-							<enhanced:img src="/static/images/photogrid/photo3.jpg" alt="" class="h-full w-full object-cover" />
+							<enhanced:img
+								src="/static/images/photogrid/photo3.jpg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
 						</div>
 						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
-							<enhanced:img src="/static/images/photogrid/photo4.jpg" alt="" class="h-full w-full object-cover" />
+							<enhanced:img
+								src="/static/images/photogrid/photo4.jpg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
 						</div>
 						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
-							<enhanced:img src="/static/images/photogrid/photo5.jpg" alt="" class="h-full w-full object-cover" />
+							<enhanced:img
+								src="/static/images/photogrid/photo5.jpg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
 						</div>
 						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
-							<enhanced:img src="/static/images/photogrid/photo6.jpg" alt="" class="h-full w-full object-cover" />
+							<enhanced:img
+								src="/static/images/photogrid/photo6.jpg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
 						</div>
 						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-xl">
-							<enhanced:img src="/static/images/photogrid/photo7.jpg" alt="" class="h-full w-full object-cover" />
+							<enhanced:img
+								src="/static/images/photogrid/photo7.jpg"
+								alt=""
+								class="h-full w-full object-cover"
+							/>
 						</div>
 					</div>
 					<!-- <div class="mb-5">

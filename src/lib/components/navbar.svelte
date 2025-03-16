@@ -42,14 +42,14 @@
 
 	<div class="flex items-center">
 		<button
-			class="p-2 transition-transform duration-300 md:hidden text-white"
+			class="p-2 text-white transition-transform duration-300 md:hidden"
 			class:rotate-90={$isOpen}
 			onclick={toggleMenu}
 			aria-label="Toggle menu"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-6 w-6 transition-transform duration-300 "
+				class="h-6 w-6 transition-transform duration-300"
 				class:rotate-45={$isOpen}
 				fill="currentColor"
 				viewBox="0 0 24 24"
@@ -64,15 +64,25 @@
 			</svg>
 		</button>
 		<div
-			class="menu mx-3 hidden flex-wrap items-center justify-around space-x-4 md:flex md:space-x-8 transition-all duration-300 font-productSans"
+			class="menu mx-3 hidden flex-wrap items-center justify-around space-x-4 font-productSans transition-all duration-300 md:flex md:space-x-8"
 		>
-			<a href="/about" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">About Me</a>
-			<a href="/portfolio" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300"
+			<a
+				href="/about"
+				class="block text-customRed transition-all duration-300 hover:text-customGreen md:inline"
+				>About Me</a
+			>
+			<a
+				href="/portfolio"
+				class="block text-customRed transition-all duration-300 hover:text-customGreen md:inline"
 				>Portfolio</a
 			>
 			<!-- <a href="/services" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">Services</a
 			> -->
-			<a href="/links" class="hover:text-customGreen text-customRed block md:inline transition-all duration-300">Links</a>
+			<a
+				href="/links"
+				class="block text-customRed transition-all duration-300 hover:text-customGreen md:inline"
+				>Links</a
+			>
 		</div>
 
 		<div
@@ -84,11 +94,13 @@
 			class:opacity-0={!$isOpen}
 			class:pointer-events-none={!$isOpen}
 		>
-			<div class="flex flex-col space-y-4 p-4 md:flex-row md:space-x-8 md:space-y-0 font-productSans">
-				<a href="/about" class="hover:text-customGreen text-customRed">About Me</a>
-				<a href="/portfolio" class="hover:text-customGreen text-customRed">Portfolio</a>
+			<div
+				class="flex flex-col space-y-4 p-4 font-productSans md:flex-row md:space-x-8 md:space-y-0"
+			>
+				<a href="/about" class="text-customRed hover:text-customGreen">About Me</a>
+				<a href="/portfolio" class="text-customRed hover:text-customGreen">Portfolio</a>
 				<!-- <a href="/services" class="hover:text-customGreen text-customRed">Services</a> -->
-				<a href="/links" class="hover:text-customGreen text-customRed">Links</a>
+				<a href="/links" class="text-customRed hover:text-customGreen">Links</a>
 			</div>
 		</div>
 	</div>

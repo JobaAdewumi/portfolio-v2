@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navbar from '../lib/components/navbar.svelte';
 	import headshot from '$lib/assets/images/headshot.jpg';
+	import Seo from '../lib/components/seo.svelte';
 
 	const socialLinks = [
 		{
@@ -42,6 +43,13 @@
 		// Add other social links here
 	];
 </script>
+
+<Seo
+	title="Joba Adewumi's Portfolio - Home"
+	description="Full-stack software engineer specializing in Web and mobile development and Data Science, with expertise in React, Svelte, Node.js, Python and modern JavaScript. Podcaster, Writer, Designer and Photographer. Explore my projects and professional experience."
+	keywords="software engineer, full-stack developer, web development, React, Node.js, JavaScript, TypeScript, SvelteKit, Python, Data Science, Flutter, Mobile development, Android, IOS, blog, portfolio, Joba Adewumi, frontend development, backend development, photography, design, writing, podcasting, videography"
+	image="/images/headshot.jpg"
+/>
 
 <Navbar />
 <div class="flex min-h-screen flex-col items-center justify-center">

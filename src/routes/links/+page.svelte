@@ -1,9 +1,14 @@
 <script lang="ts">
-	import Navbar from "../../lib/components/navbar.svelte";
+	import Navbar from '../../lib/components/navbar.svelte';
+	import Seo from '../../lib/components/seo.svelte';
 
 	const links = [
 		{ title: 'Resume/CV', url: 'Joba-Adewumi-Resume.pdf' },
 		{ title: 'Podcast on Spotify', url: 'https://open.spotify.com/show/4fIBS5rikdEvGh6tSJ93zW' },
+		{
+			title: 'Podcast on Apple Podcasts',
+			url: 'https://podcasts.apple.com/us/podcast/life/id1622904213'
+		},
 
 		{ title: 'YouTube', url: 'https://www.youtube.com/@jbtheinspirer' },
 		{ title: 'Joba’s Thoughts (Blog)', url: 'https://jobaadewumi.substack.com/' },
@@ -27,7 +32,7 @@
 			title: 'Podcast on Amazon Music',
 			url: 'https://music.amazon.com/podcasts/ec1d8440-b396-4975-bb2f-d1b031b62578/life'
 		},
-				{
+		{
 			title: 'Send in a Voice Message to be featured on the Podcast',
 			url: 'https://podcasters.spotify.com/pod/show/joba-adewumi4/message'
 		},
@@ -35,7 +40,7 @@
 			title:
 				'Send in a phrase, message to listeners or a topic you want me to discuss on the Podcast',
 			url: 'http://ngl.link/jbtheinspirer2'
-		},
+		}
 		// Add more links as needed
 	];
 
@@ -111,15 +116,22 @@
 			url: 'https://jobaadewumi.substack.com/',
 			content:
 				'<title data-testid="svgTitle" id="title_0.7095150292609758">Substack</title> <path d="M21 2.5v2H3v-2h18m0-1H3a1 1 0 00-1 1v2a1 1 0 001 1h18a1 1 0 001-1v-2a1 1 0 00-1-1zM21 7.523v2H3v-2h18m0-1H3a1 1 0 00-1 1v2a1 1 0 001 1h18a1 1 0 001-1v-2a1 1 0 00-1-1zM21 12.5v8.471l-8.199-3.585a2 2 0 00-1.602 0L3 20.971V12.5h18m0-1H3a1 1 0 00-1 1v8.471a.998.998 0 001.4.917l8.2-3.585a1 1 0 01.8 0l8.2 3.585a.998.998 0 001.4-.917V12.5a1 1 0 00-1-1z"></path>'
-		},
+		}
 		// Add other social links here
 	];
 </script>
 
+<Seo
+	title="Joba Adewumi's Links"
+	description="Links to all my Work from Software engineering, Podcasting, Writing, Designing, Photography, Favorite music and much more."
+	keywords="software engineer, full-stack developer, web development, React, Node.js, JavaScript, TypeScript, SvelteKit, Python, Data Science, Flutter, Mobile development, Android, IOS, blog, portfolio, Joba Adewumi, frontend development, backend development, photography, design, writing, podcasting, videography"
+	image="/images/multiple-logo-scattered.png"
+/>
+
 <Navbar />
 
-<div class="min-h-screen bg-gradient-to-b to-customGreen from-customBrown px-4 py-16">
-	<div class="mx-auto max-w-2xl text-center mt-8">
+<div class="min-h-screen bg-gradient-to-b from-customBrown to-customGreen px-4 py-16">
+	<div class="mx-auto mt-8 max-w-2xl text-center">
 		<!-- Profile Section -->
 		<div class="mb-8">
 			<enhanced:img
@@ -127,8 +139,10 @@
 				alt="Joba Adewumi"
 				class="mx-auto h-28 w-28 rounded-full border-2"
 			/>
-			<h1 class="mt-4 text-2xl font-bold text-white font-productSans">Joba Adewumi</h1>
-			<p class="mt-2 text-gray-300 font-pT">Software Developer | Designer | Podcaster | Photographer | Writer</p>
+			<h1 class="mt-4 font-productSans text-2xl font-bold text-white">Joba Adewumi</h1>
+			<p class="mt-2 font-pT text-gray-300">
+				Software Developer | Designer | Podcaster | Photographer | Writer
+			</p>
 		</div>
 
 		<!-- Links Section -->
@@ -137,7 +151,7 @@
 				<a
 					href={link.url}
 					download={link.title === 'Resume/CV'}
-					class="block w-full rounded-lg 	border-2 hover:border-customBrown bg-customGrey px-6 py-3 text-center text-white transition-all hover:bg-customRed"
+					class="block w-full rounded-lg border-2 bg-customGrey px-6 py-3 text-center text-white transition-all hover:border-customBrown hover:bg-customRed"
 					target="_blank"
 					rel="noopener noreferrer"
 				>

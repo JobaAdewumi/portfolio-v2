@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jobaadewumi.vercel.app/sitemap.xml
