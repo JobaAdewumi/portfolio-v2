@@ -262,7 +262,7 @@
 						<img src={photo6} alt="" />
 					</div> -->
 				{:else}
-					<p class="mb-5 mt-3 font-productSans text-white">
+					<p class="mb-5 mt-3 text-xl font-productSans text-white">
 						{description}
 					</p>
 				{/if}
