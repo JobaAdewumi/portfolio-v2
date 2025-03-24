@@ -67,6 +67,11 @@
 			class="menu mx-3 hidden flex-wrap items-center justify-around space-x-4 font-productSans transition-all duration-300 md:flex md:space-x-8"
 		>
 			<a
+				href="/blog"
+				class="block text-customRed transition-all duration-300 hover:text-customGreen md:inline"
+				>Blog</a
+			>
+			<a
 				href="/about"
 				class="block text-customRed transition-all duration-300 hover:text-customGreen md:inline"
 				>About Me</a
@@ -97,6 +102,7 @@
 			<div
 				class="flex flex-col space-y-4 p-4 font-productSans md:flex-row md:space-x-8 md:space-y-0"
 			>
+				<a href="/blog" class="text-customRed hover:text-customGreen">Blog</a>
 				<a href="/about" class="text-customRed hover:text-customGreen">About Me</a>
 				<a href="/portfolio" class="text-customRed hover:text-customGreen">Portfolio</a>
 				<!-- <a href="/services" class="hover:text-customGreen text-customRed">Services</a> -->

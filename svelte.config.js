@@ -6,7 +6,18 @@ import { mdsvex } from 'mdsvex';
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
-	preprocess: [vitePreprocess(), mdsvex()],
+	extensions: ['.svelte', '.md', '.svx'],
+	preprocess: [
+		vitePreprocess(),
+		mdsvex({
+			extension: '.md',
+			// remarkPlugins: [],
+			// rehypePlugins: [],
+			// smartypants: {
+			// 	dashes: 'oldschool'
+			// }
+		})
+	],
 
 	kit: {
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
@@ -18,8 +29,7 @@ const config = {
 	},
 	compilerOptions: {
 		runes: true
-	},
-	extensions: ['.svelte', '.svx']
+	}
 };
 
 export default config;

@@ -87,6 +87,9 @@
 	</div>
 	<ul class="list-none p-0 mt-5">
 		<li class="mx-4 inline">
+			<a href="/blog" class="text-white no-underline hover:text-customRed">Blog</a>
+		</li>
+		<li class="mx-4 inline">
 			<a href="/about" class="text-white no-underline hover:text-customRed">About</a>
 		</li>
 		<li class="mx-4 inline">
