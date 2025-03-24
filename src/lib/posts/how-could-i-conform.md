@@ -1,6 +1,6 @@
 ---
 title: "How could I conform?"
-date: "2024-01-28"
+date: "2025-01-28"
 description: "try to fit into the crowd..."
 published: true
 ---

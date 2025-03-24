@@ -14,7 +14,7 @@
 			title="{loadedData.post.title} - Joba's Thoughts"
 			description={loadedData.post.description}
 			keywords="software engineer, full-stack developer, web development, React, Node.js, JavaScript, TypeScript, SvelteKit, Python, Data Science, Flutter, Mobile development, Android, IOS, blog, portfolio, Joba Adewumi, frontend development, backend development, photography, design, writing, podcasting, videography"
-			image="/images/multiple-logo-scattered.png"
+			image="/images/thoughts.png"
 		/>
 		<header class="mb-12">
 			<h1 class="font-pT text-4xl font-bold text-white md:text-5xl lg:text-6xl">

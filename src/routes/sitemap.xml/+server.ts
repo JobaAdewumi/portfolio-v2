@@ -5,7 +5,8 @@ export const GET: RequestHandler = async () => {
 		'/',
 		'/about',
         '/portfolio',
-        '/links'
+		'/links',
+		'/blog'
 		// Add your routes here
 	];
 

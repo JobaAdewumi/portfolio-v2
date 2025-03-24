@@ -10,7 +10,7 @@
 	title="Joba's Thoughts - Joba Adewumi "
 	description="My thoughts on life. "
 	keywords="software engineer, full-stack developer, web development, React, Node.js, JavaScript, TypeScript, SvelteKit, Python, Data Science, Flutter, Mobile development, Android, IOS, blog, portfolio, Joba Adewumi, frontend development, backend development, photography, design, writing, podcasting, videography"
-	image="/images/multiple-logo-scattered.png"
+	image="/images/thoughts.png"
 />
 
 <Navbar />
