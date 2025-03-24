@@ -33,7 +33,7 @@
 			</div>
 		</header>
 
-		<div class="prose prose-lg prose-invert max-w-none">
+		<div class="prose prose-lg prose-invert max-w-none font-productSans">
 			{#if loadedData.post.content}
 				{@render loadedData.post.content()}
 			{/if}

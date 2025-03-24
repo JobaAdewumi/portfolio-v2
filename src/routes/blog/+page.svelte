@@ -30,7 +30,7 @@
             <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
         </div>
     {:then loadedData}
-        <div class="space-y-12">
+        <div class="space-y-12 font-productSans">
             {#if loadedData.posts && loadedData.posts.length > 0}
                 {#each loadedData.posts as post}
                     <article class="group border-b border-gray-700/50 pb-12 transition-all hover:border-gray-600">
