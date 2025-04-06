@@ -1,6 +1,6 @@
 <script>
 	// Add any necessary script here
-	
+
 	const socialLinks = [
 		{
 			platform: 'Linkedin',
@@ -73,19 +73,20 @@
 			url: 'https://jobaadewumi.substack.com/',
 			content:
 				'<title data-testid="svgTitle" id="title_0.7095150292609758">Substack</title> <path d="M21 2.5v2H3v-2h18m0-1H3a1 1 0 00-1 1v2a1 1 0 001 1h18a1 1 0 001-1v-2a1 1 0 00-1-1zM21 7.523v2H3v-2h18m0-1H3a1 1 0 00-1 1v2a1 1 0 001 1h18a1 1 0 001-1v-2a1 1 0 00-1-1zM21 12.5v8.471l-8.199-3.585a2 2 0 00-1.602 0L3 20.971V12.5h18m0-1H3a1 1 0 00-1 1v8.471a.998.998 0 001.4.917l8.2-3.585a1 1 0 01.8 0l8.2 3.585a.998.998 0 001.4-.917V12.5a1 1 0 00-1-1z"></path>'
-		},
+		}
 		// Add other social links here
 	];
 </script>
 
-<footer class="bg-gray-800 flex flex-col items-center p-4 text-center text-white rounded-t-2xl font-productSans">
-    
-    <div class="max-w-12">
+<footer
+	class="flex flex-col items-center rounded-t-2xl bg-gray-800 p-4 text-center font-productSans text-white"
+>
+	<div class="max-w-12">
 		<a href="/">
 			<img src="/images/multiple-logo-scattered.png" alt="Logo" />
 		</a>
 	</div>
-	<ul class="list-none p-0 mt-5">
+	<ul class="mt-5 list-none p-0">
 		<li class="mx-4 inline">
 			<a href="/blog" class="text-white no-underline hover:text-customRed">Blog</a>
 		</li>
@@ -100,34 +101,32 @@
 		</li>
 	</ul>
 
-	<!-- Social Icons Section -->
-		<div class="mt-5 flex flex-wrap justify-center gap-4 mb-5">
-			{#each socialLinks as { platform, url, content }}
-				<a
-					href={url}
-					class="text-gray-400 transition-colors duration-300 hover:text-red-500"
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label={platform}
-				>
-					<svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
-						{@html content}
-					</svg>
-				</a>
-			{/each}
-		</div>
+	<iframe
+		title="Joba's Thoughts Newsletter"
+		src="https://jobaadewumi.substack.com/embed"
+		width="100%"
+		height="232"
+		class="mb-5 mt-5 rounded-2xl border-2 border-customGrey"
+		allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+	></iframe>
 
-	<!-- <div class="mb-4 mt-5">
-		<p class="text-sm">
-			<span class="mr-4"
-				>📧 <a href="mailto:jobaadewumis@gmail.com" class="text-white hover:underline"
-					>jobaadewumis@gmail.com</a  
-				></span
+	<!-- Social Icons Section -->
+	<div class="mb-5 mt-5 flex flex-wrap justify-center gap-4">
+		{#each socialLinks as { platform, url, content }}
+			<a
+				href={url}
+				class="text-gray-400 transition-colors duration-300 hover:text-red-500"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label={platform}
 			>
-			<span
-				>📱 <a href="tel:+2348022300886" class="text-white hover:underline">802 230 0886</a></span
-			>
-		</p>
-	</div> -->
+				<svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+					{@html content}
+				</svg>
+			</a>
+		{/each}
+	</div>
+
+
 	<p>&copy; {new Date().getFullYear()} Joba Adewumi. All rights reserved.</p>
 </footer>
