@@ -1,9 +1,9 @@
 import { getPosts } from '$lib/index';
 import type { PageLoad } from './$types';
 
-export const load = (async ({ parent }) => {
-	// Wait for parent layout data if any
-	await parent();
+export const load = (async () => {
+	// // Wait for parent layout data if any
+	// await parent();
 
 	try {
 		const posts = await getPosts();

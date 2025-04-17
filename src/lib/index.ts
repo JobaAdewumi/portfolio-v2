@@ -94,9 +94,9 @@ export async function getPosts(): Promise<Post[]> {
 
 		const posts = Object.entries(paths).map(([path, module]) => {
 			// Add debug logging
-			console.log('Processing file:', path);
-			console.log('Module metadata:', module?.metadata);
-			console.log('Module content:', module?.default);
+			// console.log('Processing file:', path);
+			// console.log('Module metadata:', module?.metadata);
+			// console.log('Module content:', module?.default);
 
 			if (!module?.metadata?.title || !module?.metadata?.date) {
 				console.error(`Invalid post metadata in ${path}. Required fields: title, date`);
@@ -104,15 +104,26 @@ export async function getPosts(): Promise<Post[]> {
 			}
 
 			const slug = path.split('/').pop()?.slice(0, -3) ?? '';
-			const content = module.default;
-			const readingTime = calculateReadingTime(content);
+			// const content = module.default;
+			// // Calculate and store reading time in metadata
+			// module.metadata.readingTime = calculateReadingTime(content);
+			// console.log(`Reading time for ${slug}:`, module.metadata.readingTime);
 
 			return {
 				...module.metadata,
 				slug,
-				readingTime,
-				content
+				content: module.default,
+				readingTime: calculateReadingTime(module.default)
 			} as unknown as Post;
+
+			// const readingTime = calculateReadingTime(content);
+
+			// return {
+			// 	...module.metadata,
+			// 	slug,
+			// 	readingTime,
+			// 	content
+			// } as unknown as Post;
 		});
 
 		return posts

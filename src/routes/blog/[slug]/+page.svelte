@@ -29,7 +29,11 @@
 					})}
 				</time>
 				<span class="text-gray-600">•</span>
-				<span class="text-sm">{loadedData.post.readingTime}</span>
+				 {#if loadedData.post.readingTime}
+                    <span class="text-sm">{loadedData.post.readingTime}</span>
+                {:else}
+                    <span class="text-sm">Quick read</span>
+                {/if}
 			</div>
 		</header>
 
